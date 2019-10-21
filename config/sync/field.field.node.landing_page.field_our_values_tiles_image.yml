@@ -1,17 +1,17 @@
-uuid: 7fd7db1a-4e4a-4a64-a704-d54578ec5c9f
+uuid: 0cfbfd53-8884-4b09-b079-588fb3f7d124
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail__image
+    - field.storage.node.field_our_values_tiles_image
     - node.type.landing_page
   module:
     - image
-id: node.landing_page.field_banner_detail__image
-field_name: field_banner_detail__image
+id: node.landing_page.field_our_values_tiles_image
+field_name: field_our_values_tiles_image
 entity_type: node
 bundle: landing_page
-label: 'dunlopillo go image'
+label: 'Our values tiles image'
 description: ''
 required: false
 translatable: false

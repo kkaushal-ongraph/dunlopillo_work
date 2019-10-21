@@ -1,15 +1,15 @@
-uuid: bea4295b-0ea1-41a2-bc3f-d51cd0ccbfee
+uuid: 05544cc7-73db-4b59-b63f-d7a185309b65
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail_
+    - field.storage.node.field_naatural_resurce
     - node.type.landing_page
-id: node.landing_page.field_banner_detail_
-field_name: field_banner_detail_
+id: node.landing_page.field_naatural_resurce
+field_name: field_naatural_resurce
 entity_type: node
 bundle: landing_page
-label: signiture
+label: 'NATURAL RESOURCES'
 description: ''
 required: false
 translatable: false

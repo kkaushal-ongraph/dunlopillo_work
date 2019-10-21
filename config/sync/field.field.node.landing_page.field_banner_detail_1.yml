@@ -9,7 +9,7 @@ id: node.landing_page.field_banner_detail_1
 field_name: field_banner_detail_1
 entity_type: node
 bundle: landing_page
-label: 'banner detail_1'
+label: 'best buy'
 description: ''
 required: false
 translatable: false

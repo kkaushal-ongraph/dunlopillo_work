@@ -11,7 +11,7 @@ id: node.landing_page.field_banner_detail_2_image
 field_name: field_banner_detail_2_image
 entity_type: node
 bundle: landing_page
-label: 'banner detail_2 image'
+label: 'signiture image'
 description: ''
 required: false
 translatable: false

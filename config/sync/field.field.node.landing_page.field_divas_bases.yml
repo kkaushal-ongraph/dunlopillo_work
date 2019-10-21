@@ -1,15 +1,15 @@
-uuid: bea4295b-0ea1-41a2-bc3f-d51cd0ccbfee
+uuid: e4f8b47e-b6b8-4a8d-86f0-9cc1fc75f909
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail_
+    - field.storage.node.field_divas_bases
     - node.type.landing_page
-id: node.landing_page.field_banner_detail_
-field_name: field_banner_detail_
+id: node.landing_page.field_divas_bases
+field_name: field_divas_bases
 entity_type: node
 bundle: landing_page
-label: signiture
+label: 'divas bases'
 description: ''
 required: false
 translatable: false

@@ -11,13 +11,25 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
-    - field.field.node.landing_page.field_our_m
+    - field.field.node.landing_page.field_divas_bases
+    - field.field.node.landing_page.field_divas_bases_image
+    - field.field.node.landing_page.field_enviromental
+    - field.field.node.landing_page.field_ethical_practice
+    - field.field.node.landing_page.field_head_to_our_shop
+    - field.field.node.landing_page.field_naatural_resurce
     - field.field.node.landing_page.field_our_mission
     - field.field.node.landing_page.field_our_mission_
     - field.field.node.landing_page.field_our_mission_description_te
     - field.field.node.landing_page.field_our_mission_image
+    - field.field.node.landing_page.field_our_promise
+    - field.field.node.landing_page.field_our_promise2
+    - field.field.node.landing_page.field_our_promise_desc
+    - field.field.node.landing_page.field_our_promise_desc2
+    - field.field.node.landing_page.field_our_promise_image1
+    - field.field.node.landing_page.field_our_promise_image_2
     - field.field.node.landing_page.field_our_values
     - field.field.node.landing_page.field_our_values_background
+    - field.field.node.landing_page.field_our_values_tiles_image
     - image.style.thumbnail
     - node.type.landing_page
   module:
@@ -98,8 +110,48 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_our_m:
-    weight: 134
+  field_divas_bases:
+    weight: 149
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_divas_bases_image:
+    weight: 150
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_enviromental:
+    weight: 140
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ethical_practice:
+    weight: 138
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_head_to_our_shop:
+    weight: 148
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_naatural_resurce:
+    weight: 139
     settings:
       size: 60
       placeholder: ''
@@ -139,6 +191,54 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_our_promise:
+    weight: 141
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_our_promise2:
+    weight: 145
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_our_promise_desc:
+    weight: 142
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_our_promise_desc2:
+    weight: 146
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_our_promise_image1:
+    weight: 144
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_our_promise_image_2:
+    weight: 147
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_our_values:
     weight: 135
     settings:
@@ -149,6 +249,14 @@ content:
     region: content
   field_our_values_background:
     weight: 136
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_our_values_tiles_image:
+    weight: 137
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

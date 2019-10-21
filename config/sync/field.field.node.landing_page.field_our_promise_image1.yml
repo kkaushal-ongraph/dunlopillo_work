@@ -1,17 +1,17 @@
-uuid: 7fd7db1a-4e4a-4a64-a704-d54578ec5c9f
+uuid: 7f8eb7b1-4bee-4cde-bf01-21b5385701fb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail__image
+    - field.storage.node.field_our_promise_image1
     - node.type.landing_page
   module:
     - image
-id: node.landing_page.field_banner_detail__image
-field_name: field_banner_detail__image
+id: node.landing_page.field_our_promise_image1
+field_name: field_our_promise_image1
 entity_type: node
 bundle: landing_page
-label: 'dunlopillo go image'
+label: 'our promise image1'
 description: ''
 required: false
 translatable: false

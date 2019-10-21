@@ -1,0 +1,21 @@
+uuid: 6fa34da0-4e43-4f7a-96e0-122b45381279
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_head_to_our_shop
+field_name: field_head_to_our_shop
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

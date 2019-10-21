@@ -1,15 +1,15 @@
-uuid: 08b140a7-e02f-4197-96ef-bc5355f8298c
+uuid: aae101db-60bb-4395-b1e1-5ca8639d4303
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_our_m
+    - field.storage.node.field_our_promise_desc
     - node.type.landing_page
-id: node.landing_page.field_our_m
-field_name: field_our_m
+id: node.landing_page.field_our_promise_desc
+field_name: field_our_promise_desc
 entity_type: node
 bundle: landing_page
-label: 'Our m'
+label: 'OUR PROMISE desc 1'
 description: ''
 required: false
 translatable: false

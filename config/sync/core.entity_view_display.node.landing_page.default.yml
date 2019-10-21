@@ -11,13 +11,25 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
-    - field.field.node.landing_page.field_our_m
+    - field.field.node.landing_page.field_divas_bases
+    - field.field.node.landing_page.field_divas_bases_image
+    - field.field.node.landing_page.field_enviromental
+    - field.field.node.landing_page.field_ethical_practice
+    - field.field.node.landing_page.field_head_to_our_shop
+    - field.field.node.landing_page.field_naatural_resurce
     - field.field.node.landing_page.field_our_mission
     - field.field.node.landing_page.field_our_mission_
     - field.field.node.landing_page.field_our_mission_description_te
     - field.field.node.landing_page.field_our_mission_image
+    - field.field.node.landing_page.field_our_promise
+    - field.field.node.landing_page.field_our_promise2
+    - field.field.node.landing_page.field_our_promise_desc
+    - field.field.node.landing_page.field_our_promise_desc2
+    - field.field.node.landing_page.field_our_promise_image1
+    - field.field.node.landing_page.field_our_promise_image_2
     - field.field.node.landing_page.field_our_values
     - field.field.node.landing_page.field_our_values_background
+    - field.field.node.landing_page.field_our_values_tiles_image
     - node.type.landing_page
   module:
     - image
@@ -29,7 +41,7 @@ mode: default
 content:
   field_banner_detail_:
     weight: 105
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -63,7 +75,7 @@ content:
     region: content
   field_banner_detail_3:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -71,7 +83,7 @@ content:
     region: content
   field_banner_detail__image:
     weight: 108
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -95,8 +107,49 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_our_m:
-    weight: 114
+  field_divas_bases:
+    weight: 129
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_divas_bases_image:
+    weight: 130
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_enviromental:
+    weight: 120
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ethical_practice:
+    weight: 118
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_head_to_our_shop:
+    weight: 128
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_naatural_resurce:
+    weight: 119
     label: above
     settings:
       link_to_entity: false
@@ -129,7 +182,57 @@ content:
     region: content
   field_our_mission_image:
     weight: 113
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_our_promise:
+    weight: 121
     label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_our_promise2:
+    weight: 125
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_our_promise_desc:
+    weight: 122
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_our_promise_desc2:
+    weight: 126
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_our_promise_image1:
+    weight: 124
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_our_promise_image_2:
+    weight: 127
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -147,6 +250,15 @@ content:
   field_our_values_background:
     weight: 116
     label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_our_values_tiles_image:
+    weight: 117
+    label: hidden
     settings:
       image_style: ''
       image_link: ''

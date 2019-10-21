@@ -1,15 +1,15 @@
-uuid: bea4295b-0ea1-41a2-bc3f-d51cd0ccbfee
+uuid: da11c345-1256-4930-8c1a-4ad86e24ff34
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail_
+    - field.storage.node.field_head_to_our_shop
     - node.type.landing_page
-id: node.landing_page.field_banner_detail_
-field_name: field_banner_detail_
+id: node.landing_page.field_head_to_our_shop
+field_name: field_head_to_our_shop
 entity_type: node
 bundle: landing_page
-label: signiture
+label: 'head to our shop'
 description: ''
 required: false
 translatable: false
