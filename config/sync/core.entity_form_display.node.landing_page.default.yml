@@ -11,10 +11,6 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
-    - field.field.node.landing_page.field_our_mission
-    - field.field.node.landing_page.field_our_mission_
-    - field.field.node.landing_page.field_our_mission_description_te
-    - field.field.node.landing_page.field_our_mission_image
     - image.style.thumbnail
     - node.type.landing_page
   module:
@@ -94,39 +90,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_our_mission:
-    weight: 130
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_our_mission_:
-    weight: 132
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_our_mission_description_te:
-    weight: 131
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_our_mission_image:
-    weight: 133
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   path:
     type: path

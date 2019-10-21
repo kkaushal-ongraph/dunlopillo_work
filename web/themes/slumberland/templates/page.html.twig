@@ -37,28 +37,30 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
 
-  {{ page.before_content }}
+<header role="banner">
+    <div class="header_main">
+        {{ page.header }}
+    </div>
+</header>
 
-  <main role="main">
+{{ page.before_content }}
+
+<main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      {{ page.content }}
+        {{ page.content }}
     </div>{# /.layout-content #}
 
-  </main>
+</main>
 
-</div>{# /.layout-container #}
+
 
 <footer role="contentinfo">
-  <div class="container">
-    {{ page.footer_top }}
-    {{ page.footer_bottom }}
-  </div>
+    <div class="container">
+        {{ page.footer_top }}
+        {{ page.footer_bottom }}
+    </div>
 </footer>
