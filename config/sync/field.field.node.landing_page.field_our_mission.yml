@@ -1,0 +1,19 @@
+uuid: c75feadf-c6e9-4a03-bf06-e60f8126932b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_mission
+    - node.type.landing_page
+id: node.landing_page.field_our_mission
+field_name: field_our_mission
+entity_type: node
+bundle: landing_page
+label: 'Our mission'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

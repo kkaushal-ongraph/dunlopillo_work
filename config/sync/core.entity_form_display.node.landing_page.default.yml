@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
+    - field.field.node.landing_page.field_our_mission
     - image.style.thumbnail
     - node.type.landing_page
   module:
@@ -85,6 +86,14 @@ content:
     region: content
   field_banner_text:
     weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_our_mission:
+    weight: 129
     settings:
       size: 60
       placeholder: ''
