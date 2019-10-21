@@ -1,0 +1,69 @@
+uuid: 44b889f6-6370-43e9-aea5-e5207c8137bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+  content:
+    - 'block_content:basic:219abc8a-54c9-471a-be02-7cdbd7c81d6d'
+    - 'block_content:basic:3de1808a-3494-483b-808c-c7d9148aff2b'
+    - 'block_content:basic:8a3f38b8-95f2-446c-849f-5793cf07cbe4'
+  module:
+    - block_content
+    - panels
+id: homepage-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    3ebfc8b3-8eaf-422b-b811-382cf7ee5648:
+      id: 'block_content:3de1808a-3494-483b-808c-c7d9148aff2b'
+      label: 'natural night'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: top
+      uuid: 3ebfc8b3-8eaf-422b-b811-382cf7ee5648
+      weight: 2
+    07af9a7c-e7ee-44e1-b92b-a75ed735d11c:
+      id: 'block_content:8a3f38b8-95f2-446c-849f-5793cf07cbe4'
+      label: 'front header'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: top
+      uuid: 07af9a7c-e7ee-44e1-b92b-a75ed735d11c
+      weight: 1
+    72913c8d-ae6e-429f-b62d-d63d14c7df10:
+      id: 'block_content:219abc8a-54c9-471a-be02-7cdbd7c81d6d'
+      label: 'our missions'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      context_mapping: {  }
+      region: middle
+      uuid: 72913c8d-ae6e-429f-b62d-d63d14c7df10
+      weight: 1
+  id: panels_variant
+  uuid: 94dbf476-b585-42c2-8fe7-ce8dbb0dd1d0
+  label: null
+  weight: 0
+  layout: layout_twocol_bricks
+  layout_settings: {  }
+  page_title: null
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
