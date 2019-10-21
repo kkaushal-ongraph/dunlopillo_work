@@ -17,7 +17,8 @@ p{
     font-size: 35px;
     color: #fff;
 }
-.header_main a.nav-link {
+
+.header_main .menu-item a {
     text-transform: uppercase;
     font-size: 14px;
     padding: 10px 15px !important;
