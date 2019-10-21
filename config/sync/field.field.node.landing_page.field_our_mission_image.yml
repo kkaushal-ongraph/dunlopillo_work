@@ -1,17 +1,17 @@
-uuid: 7fd7db1a-4e4a-4a64-a704-d54578ec5c9f
+uuid: a0f6d557-a81b-48bb-9a3a-7e2134d91f6a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_banner_detail__image
+    - field.storage.node.field_our_mission_image
     - node.type.landing_page
   module:
     - image
-id: node.landing_page.field_banner_detail__image
-field_name: field_banner_detail__image
+id: node.landing_page.field_our_mission_image
+field_name: field_our_mission_image
 entity_type: node
 bundle: landing_page
-label: 'banner detail_3 image'
+label: 'Our mission image'
 description: ''
 required: false
 translatable: false
