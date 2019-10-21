@@ -89,7 +89,7 @@
 							<div class="banner_overlay"></div>
 							<div class="row">
 								<div class="col-sm-5 banner_title py-5">
-									<h1 class="text-white">A natural <br>nights sleep</h1>
+									<h1 class="text-white">{{content.field_banner_text}}</h1>
 									<p class="text-uppercase text-white">the Ethical Matresses</p>
 								</div>
 								<div class="col-sm-7 banner_video">
@@ -99,32 +99,32 @@
 									<div class="best_buy">
 										<div class="best_product row">
 											<div class="col-sm-5 pl-0">
-												<img src="images/best-buy.png">
+												{{content.field_banner_detail_1_image}}
 											</div>
 											<div class="col-sm-7 px-0 details_part">
-												<p class="text-uppercase text-blue">Best Buy</p>
+												<div class="text-uppercase text-blue"></div>
 												<h6 class="text-uppercase text-subhead">Millenium</h6>
-												<p class="text-grey">Intibus sapicaeperum faccaec epudae ius, ut evelit eum hario.</p>
+												<p class="text-grey">{{best}}</p>
 											</div>
 										</div>
 									</div>
 									<div class="all_product">
 										<div class="product_list pl-0 pr-2">
 											<div>
-												<img src="images/signature.png">
+												{{content.field_banner_detail_2_image}}
 												<p class="text-uppercase text-subhead">Signiture</p>
 											</div>
 										</div>
 										<div class="product_list px-1">
 											<div>
-												<img src="images/signature2.png">
-												<p class="text-uppercase text-subhead">Dunlopillo Go</p>
+												{{contetn.field_banner_detail__image}}
+												<p class="text-uppercase text-subhead">{{content.field_banner_detail_3}}</p>
 											</div>
 										</div>
 										<div class="product_list pr-0 pl-2">
 											<div>
-												<img src="images/signature3.png">
-												<p class="text-uppercase text-subhead">Divas Bases</p>
+												{{content.field_divas_bases_}}
+												<p class="text-uppercase text-subhead">{{content.field_divas_bases}}</p>
 											</div>
 										</div>
 									</div>
@@ -136,22 +136,10 @@
 								<div class="col-sm-6">
 									<div class="comfort_text pt-5">
 										<h6 class="text-uppercase text-grey">Our Mission</h6>
-										<h1 class="text-subhead pb-4">Sustainable comfort</h1>
-										<p class="text-grey">Sleep easy with our environmentally friendly mattresses, made from natural latex rubber. All our latex is harvested from sustainably managed plantations, which purify over 90 million tons of carbon dioxide a year.</p>
+										<h1 class="text-subhead pb-4">{{content.field_our_mission}}</h1>
+										<p class="text-grey">{{content.field_our_mission_description_te}}</p>
 										<ul class="mt-4 pl-4">
-											<li>
-												<span class="text-blue text-uppercase">7 comfort zones</span>
-											</li>
-											<li>
-												<span class="text-blue text-uppercase">Pressure Relieving</span>
-											</li>
-											<li>
-												<span class="text-blue text-uppercase">Breathable</span>
-											</li>
-											<li>
-												<span class="text-blue text-uppercase">Progressive comfort</span>
-											</li>
-											<a href="javascript:void(0)" class="text-uppercase shop_bttn">Shop mattresses</a>
+											{{contetn.field_our_mission_description_te}}
 										</ul>
 									</div>
 								</div>

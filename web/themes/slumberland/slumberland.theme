@@ -8,7 +8,9 @@
 function slumberland_preprocess_node(&$variables) {
   $node = $variables['node'];
   $variables['img'] = $variables['node']->get('field_banner_image')->view('full');
-   $variables['info'] = $variables['node']->get('field_banner_text')->view('full');
+  $variables['bannerText'] = $variables['node']->get('field_banner_text')->getValue();
+  $variables['best'] = $variables['node']->get('field_banner_detail_1')->view('full');
+  
   if ($node->bundle() === 'article') {
     $terms = $node->get('field_tags')->referencedEntities();
     $featured = $node->get('field_top_read')->getValue();

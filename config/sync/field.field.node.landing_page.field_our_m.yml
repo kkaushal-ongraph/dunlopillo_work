@@ -1,0 +1,19 @@
+uuid: 08b140a7-e02f-4197-96ef-bc5355f8298c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_our_m
+    - node.type.landing_page
+id: node.landing_page.field_our_m
+field_name: field_our_m
+entity_type: node
+bundle: landing_page
+label: 'Our m'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
