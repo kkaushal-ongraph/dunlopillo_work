@@ -1,0 +1,58 @@
+.cta-three-blocks {
+  padding: 4rem 0 9.5rem 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3.7rem;
+  }
+
+  .cta-three-blocks__inner {
+    @include flex;
+  }
+
+  .cta-three-blocks__item {
+    flex: 1;
+    @include flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0 0 3.6rem;
+    text-decoration: none;
+    color: $white;
+    height: 240px;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 136px;
+      content: '';
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    &:hover, &:focus {
+      &:before {
+        opacity: 0.75;
+      }
+    }
+
+    h3 {
+      z-index: 1;
+      color: inherit;
+      position: relative;
+    }
+  }
+}
+
+.block-slumberland-image-text + .block-slumberland-cta-three-blocks {
+  .cta-three-blocks {
+    padding-top: 9.4rem;
+  }
+}

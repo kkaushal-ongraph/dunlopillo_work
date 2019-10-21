@@ -1,0 +1,41 @@
+.view-blog.view-display-id-page_1 {
+
+  .view-filters {
+    @include flex;
+    justify-content: flex-end;
+  }
+
+  > .view-content {
+
+    .views-infinite-scroll-content-wrapper {
+      @include flex;
+      margin: 0 -1.35rem;
+    }
+
+    .views-row {
+      width: 33.3%;
+      padding: 0 1.35rem 3.2rem;
+
+      &:nth-child(1), &:nth-child(2) {
+        width: 50%;
+
+        .article--teaser {
+          @extend .article--row;
+
+          .article__image {
+            height: auto;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.path-blog {
+  main[role=main] {
+    @extend .container;
+    padding-top: 3.9rem;
+  }
+}

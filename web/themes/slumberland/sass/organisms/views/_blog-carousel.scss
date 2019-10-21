@@ -1,0 +1,35 @@
+.block-views-blockblog-carousel {
+  background-color: $bridesmaid;
+  @include wings;
+  padding: 8rem 0 4.7rem;
+
+  > h2 {
+    text-align: center;
+    margin-bottom: 3.1rem;
+  }
+
+  .view-blog.view-display-id-carousel {
+    margin: 0 -10px;
+  }
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-dots li {
+    button {
+      background-color: rgba($primary-red, 0.4);
+    }
+
+    &.slick-active button {
+      background-color: $primary-red;
+    }
+  }
+
+  .view-content {
+    .views-row {
+      width: 434px;
+      padding: 0 10px;
+    }
+  }
+}

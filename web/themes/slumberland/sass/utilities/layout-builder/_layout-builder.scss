@@ -1,0 +1,600 @@
+// The Edit Layout/Save Layout/etc. overlay
+#block-slumberland-local-tasks {
+  position: fixed !important;
+  z-index: 999 !important;
+  bottom: 2rem;
+  left: -168px;
+  background-color: #333;
+  border-radius: .5rem;
+  //overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+
+  nav.tabs {
+    display: flex;
+  }
+
+  .local-tasks-content {
+    width: 168px;
+  }
+
+  .local-tasks-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      opacity: 0.5;
+      background-color: lighten(#333, 10);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 13px;
+    line-height: 35.75px;
+    background: none;
+
+    &:hover {
+      background-color: lighten(#333, 10);
+    }
+  }
+
+  &.open {
+    left: 16px;
+
+    .local-tasks-arrow svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .contextual {
+    display: none !important;
+  }
+}
+
+// HB New "Save Layout Bar"
+//.layout-content #block-slumberland-local-tasks .tabs.secondary {
+//  position: fixed;
+//  bottom: 20px;
+//  left: 50%;
+//  z-index: 999;
+//  background: #f5f5f5;
+//  width: 60%;
+//  margin-left: 20%;
+//  left: 0;
+//  border-radius: 100px;
+//  padding: 5px;
+//  opacity: 1;
+//  box-shadow: 0px 0px 5px 0px #888888;
+//
+//  & li {
+//    float: right;
+//    font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+//
+//    & a {
+//      line-height: 40px;
+//      background-color: #0074BC;
+//      text-decoration: none;
+//      border-radius: 50px;
+//      font-weight: bold;
+//    }
+//  }
+//
+//  & li:nth-child(2) a {
+//    line-height: 40px;
+//    background: none;
+//    text-decoration: underline;
+//    color: #888;
+//    font-weight: normal;
+//
+//  }
+//
+//  & li:nth-child(3) {
+//    display: none;
+//  }
+//}
+
+.layout-container .messages.messages--warning {
+  position: fixed;
+  bottom: 20px;
+  left: 20%;
+  z-index: 1001;
+  color: #e73855;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 5px;
+  margin-left: 20px;
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+}
+
+
+// Off canvas bits
+#drupal-off-canvas *, #drupal-off-canvas *:not(div) {
+  background: none;
+}
+
+.dialog-off-canvas-main-canvas {
+  padding-right: 0 !important;
+}
+
+.ui-dialog {
+  z-index: 9999;
+}
+
+.ui-dialog.ui-dialog-off-canvas .ui-dialog-title,
+#drupal-off-canvas form {
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif !important;
+}
+
+#drupal-off-canvas button, #drupal-off-canvas .button {
+  font-size: 13px;
+}
+
+#drupal-off-canvas fieldset:not(:first-child) legend {
+  padding-top: 15px !important;
+  border-bottom: 1px solid #000 !important;
+  font-weight: bold;
+}
+
+#drupal-off-canvas .form-textarea,
+#drupal-off-canvas input[type="url"] {
+  background-color: #fff;
+}
+
+#drupal-off-canvas hr {
+  background: #ccc !important;
+}
+
+#drupal-off-canvas .form-item label {
+  width: auto;
+}
+
+#drupal-off-canvas .description,
+#drupal-off-canvas .form-item .description,
+#drupal-off-canvas .details-description {
+  color: #555;
+
+  strong {
+    color: #555;
+  }
+}
+
+// 2. The sidebar
+// Remove the superfluous elements that add nothing
+.layout-builder-add-block,
+.layout-builder-update-block {
+  > .form-item:nth-child(1), // The name of the block
+  > .form-item:nth-child(2), // The title for the block
+  > .form-item:nth-child(3) // "Display title" checkbox
+  {
+    display: none;
+  }
+}
+
+// Make the WYSIWYG editor usable
+.form-type-textarea {
+  // Background from dark to light
+  .cke_top,
+  .cke_toolbox,
+  .cke_toolbar,
+  .cke_voice_label,
+  .cke_toolgroup,
+  .cke_button,
+  .cke_button_icon,
+  .cke_combo,
+  .cke_combo_button,
+  .cke_combo_text,
+  .cke_combo_open,
+  .cke_toolgroup,
+  .cke_button_label {
+    background-color: #ddd !important;
+    color: #555 !important;
+    font-size: 0.8rem !important;
+  }
+
+  .cke_top {
+    border-bottom: 1px solid #bbb !important;
+  }
+
+  // Make the buttons a lot more spaced out, for easier editing
+  .cke_button {
+    padding: 4px !important;
+  }
+
+  .cke_combo {
+    padding: 0 4px 0 8px !important;
+  }
+
+  // Hide the "Text format" options
+  .cke_bottom,
+  + .filter-wrapper {
+    display: none;
+  }
+}
+
+// Generic sidebar styling
+.js-off-canvas-dialog-open .ui-dialog-off-canvas {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.347968);
+  border: 0 !important;
+
+  .ui-dialog-titlebar {
+    background-color: #dddddd;
+    border: 0;
+    color: #333;
+
+    .ui-dialog-title {
+      line-height: 25px;
+      padding: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .ui-dialog-titlebar-close {
+      background-image: url('../../../core/misc/icons/000000/ex.svg');
+
+      &:hover {
+        border: 0;
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    background-color: #e8e8e8;
+
+    .inline-block-create-button {
+      display: none !important;
+    }
+
+    .block-categories {
+      details {
+        padding: 0 24px !important;
+
+        summary {
+          background: none !important;
+          color: #333 !important;
+          font-weight: 400 !important;
+          padding-bottom: 0 !important;
+          cursor: initial;
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+        }
+
+        .details-wrapper {
+          margin-top: 18px !important;
+
+          .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li {
+              display: flex !important;
+              width: 108px;
+              box-shadow: 0px 0px 4px rgba(118, 118, 118, 0.311934);
+              border-radius: 10px;
+              margin-bottom: 18px !important;
+
+              a {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #333 !important;
+                font-size: 13px !important;
+                line-height: 18px;
+                padding: 10px !important;
+                text-decoration: none !important;
+                font-weight: 200 !important;
+              }
+
+              &:hover {
+                background-color: #F0F0F0 !important;
+
+                a {
+                  font-weight: 400 !important;
+                  letter-spacing: -0.2px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  label, .fieldset-legend {
+    color: #333 !important;
+  }
+
+  .layout-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 18px !important;
+
+    li {
+      display: flex !important;
+      padding-bottom: 18px !important;
+      width: 108px;
+
+      a {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        text-align: center;
+        padding: 0 !important;
+        text-decoration: none !important;
+
+        > div {
+          color: #333 !important;
+          font-size: 13px !important;
+          font-weight: 200 !important;
+        }
+
+        &:hover {
+
+          > div {
+            font-weight: 400 !important;
+            letter-spacing: -0.2px;
+          }
+        }
+      }
+    }
+  }
+
+  .form-text {
+    background-color: #fff !important;
+    border: 1px solid #333 !important;
+    border-radius: 2px !important;
+    line-height: 23px !important;
+    width: 100%;
+  }
+
+  .form-select {
+    width: 100%;
+    border: 1px solid #333 !important;
+
+    option {
+      color: #333 !important;
+    }
+  }
+}
+
+//#layout-builder {
+//
+//  // Generic bits
+//  margin-bottom: 200px;
+//
+//  .layout-section .layout-builder--layout__region .block {
+//    padding: 0;
+//  }
+//
+//  .layout-section .layout-builder--layout__region {
+//    outline: none;
+//  }
+//
+//  .layout-section .ui-state-drop {
+//    margin: 20px 0px;
+//  }
+//
+//  .contextual-region.focus {
+//    outline: none;
+//  }
+//
+//  // 1. The main content
+//  // Do not show visually hidden things in the content
+//  .draggable {
+//    // Show the content and hide the "Read more" link
+//    .visually-hidden {
+//      display: block;
+//    }
+//  }
+//
+//  // Section
+//  .layout-section {
+//    margin-bottom: 0;
+//    position: relative;
+//
+//    .configure-section {
+//      position: absolute;
+//      z-index: 1;
+//      background: url(/core/misc/icons/bebebe/pencil.svg) #fff center center / 16px 16px no-repeat;
+//      border: 1px solid #ccc;
+//      box-sizing: border-box;
+//      font-size: 1rem;
+//      padding: 0;
+//      height: 26px;
+//      width: 26px;
+//      white-space: nowrap;
+//      text-indent: -9999px;
+//      display: inline-block;
+//      border-radius: 26px;
+//      bottom: 0;
+//      right: 55px;
+//      margin: 10px;
+//
+//      &:focus, &:hover {
+//        background-image: url(/core/misc/icons/787878/pencil.svg);
+//      }
+//    }
+//
+//    .remove-section {
+//      position: absolute;
+//      bottom: 0;
+//      right: 20px;
+//      margin: 10px;
+//      z-index: 1;
+//    }
+//
+//    .ajax-progress {
+//      display: none;
+//    }
+//  }
+//
+//  // New Section
+//  .new-section {
+//    outline: 0;
+//    padding: 0;
+//    margin: 0;
+//    width: 60%;
+//    margin: 0 auto;
+//    position: relative;
+//    top: 8px;
+//    z-index: 200;
+//    margin-top: -8px;
+//
+//    a {
+//      line-height: 0;
+//      border-radius: 5px;
+//      border: 4px solid purple !important;
+//      background: none;
+//      padding: 0;
+//      font-size: 0;
+//      display: block;
+//      opacity: 0.1;
+//      transition: all 0.1s ease-in-out;
+//
+//      &::after {
+//        content: "Add Section";
+//        font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+//        display: block;
+//        position: absolute;
+//        font-size: 13px;
+//        width: 100%;
+//        top: 8px;
+//        left: 0;
+//        line-height: 20px;
+//        color: purple;
+//        opacity: 0;
+//      }
+//
+//      &:hover {
+//        border: 4px solid purple;
+//        opacity: 0.8;
+//        transition: all 0.1s ease-in-out;
+//
+//        &::after {
+//          opacity: 1
+//        }
+//      }
+//    }
+//
+//    .ajax-progress {
+//      display: none;
+//    }
+//  }
+//
+//  // New Block
+//  .layout-section .layout-builder--layout__region .new-block {
+//    padding: 0;
+//    border-radius: 5px;
+//    max-width: 90%;
+//    position: relative;
+//    left: 5%;
+//    opacity: 0.8;
+//    transition: all 0.1s ease-in-out;
+//
+//    &:hover {
+//      opacity: 1;
+//    }
+//
+//    .new-block__link {
+//      background: none;
+//      padding: 0;
+//      font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+//      font-size: 13px;
+//      text-decoration: none;
+//      color: #5b80a0;
+//      padding: 1em 0;
+//      display: block;
+//
+//    }
+//
+//    .ajax-progress {
+//      display: none;
+//    }
+//  }
+//
+//  // Block
+//  .layout-section .block {
+//    .contextual > button {
+//      display: none;
+//    }
+//
+//    &:hover {
+//      .contextual .contextual-links {
+//        display: block !important;
+//      }
+//    }
+//
+//    .contextual .contextual-links {
+//      background: none;
+//      border: none;
+//      padding: 0;
+//      margin: 0;
+//
+//      li {
+//        border: 1px solid #ccc;
+//        box-sizing: border-box;
+//        font-size: 1rem;
+//        padding: 0;
+//        height: 26px;
+//        width: 26px;
+//        white-space: nowrap;
+//        text-indent: -9999px;
+//        display: inline-block;
+//        border-radius: 26px;
+//        margin: 5px;
+//
+//        a {
+//          background: none;
+//
+//          &:hover {
+//            background: none;
+//          }
+//        }
+//
+//        .ajax-progress {
+//          display: none;
+//        }
+//      }
+//
+//      li:nth-child(1) {
+//        background: url(/core/misc/icons/bebebe/pencil.svg) #fff center center / 16px 16px no-repeat;
+//      }
+//
+//      li:nth-child(2) {
+//        background: url(/core/misc/icons/bebebe/ex.svg) #fff center center / 16px 16px no-repeat;
+//      }
+//
+//    }
+//
+//
+//  }
+//}
+

@@ -1,0 +1,5 @@
+dunlopillo_style:
+  version: 1.x
+  css:
+   theme:
+    css/dp_style.css: {}

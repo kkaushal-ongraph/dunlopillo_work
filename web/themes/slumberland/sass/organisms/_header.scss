@@ -1,0 +1,38 @@
+header[role="banner"] {
+  background-color: $white;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .toolbar-fixed & {
+    &.fixed {
+      top: 79px;
+
+      @media all and (max-width: 975px) {
+        top: 39px;
+      }
+    }
+  }
+
+  .region-header {
+    @extend .container;
+    @include flex;
+    align-items: center;
+    padding-top: 1.7rem;
+    padding-bottom: 1.1rem;
+  }
+
+  .search-block-form {
+    display: none;
+  }
+
+  .layout-builder--enabled & {
+    position: static;
+    z-index: inherit;
+  }
+}

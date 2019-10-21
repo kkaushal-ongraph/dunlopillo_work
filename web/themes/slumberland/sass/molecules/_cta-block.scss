@@ -1,0 +1,22 @@
+.cta-block {
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  transition: all 0.2s;
+
+  &:hover, &:focus {
+    border-color: $iron;
+  }
+
+  .cta-block__image {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  h3 {
+    padding: 1.4rem 1rem 0.6rem;
+  }
+}

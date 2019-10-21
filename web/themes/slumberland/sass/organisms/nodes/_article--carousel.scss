@@ -1,0 +1,41 @@
+.article--carousel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 250px;
+  padding: 0 3rem;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: rgba($black-rock, 0.5);
+  }
+
+  a.article--carousel__inner {
+    z-index: 1;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: $white;
+  }
+
+  .article__label {
+    margin-bottom: 1.3rem;
+  }
+
+  h3 {
+    color: $white;
+  }
+
+}

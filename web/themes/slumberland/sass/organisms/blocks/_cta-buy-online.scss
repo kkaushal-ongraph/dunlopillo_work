@@ -1,0 +1,42 @@
+.cta-buy-online {
+  margin: 8rem 0 0;
+  background-color: $catskill-white;
+  @include wings;
+  padding: 6.3rem 0 5.1rem 0;
+
+  .cta-buy-online__inner {
+    max-width: 388px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2.9rem;
+    }
+  }
+
+  .cta-buy-online__links {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+      padding-left: 3.3rem;
+    }
+  }
+
+  .cta-buy-online__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: 246px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &--on-left .cta-buy-online__image {
+    left: auto;
+    right: 50%;
+    margin-left: auto;
+    margin-right: 246px;
+  }
+}

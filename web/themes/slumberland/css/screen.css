@@ -1,0 +1,255 @@
+body , p , span , h1 , h2 , h3 , h4 , h5 , h6 {
+	font-family: 'Barlow', sans-serif;
+}
+p{
+	font-size: 16px;
+}
+.header_main{
+	position: absolute;
+	top:0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 99;
+}
+
+.header_main a.navbar-brand {
+    font-size: 35px;
+    color: #fff;
+}
+.header_main a.nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 15px !important;
+    display: inline-block;
+    color:#fff !important;
+}
+.page_banner {
+    background-color:#4B4F54;
+    padding: 100px 0 50px;
+    background-size: 100% 100%;
+    margin-bottom: 100px !important;
+    position: relative;
+}
+.banner_overlay{
+	position: absolute;
+	content: "";
+	top:0;
+	left:0;
+	width: 80%;
+	height: 100%;
+    background-image:url('../images/banner-bg-new.png') ;
+    background-size: 100% 100%;
+    z-index: 9;
+}
+.page_banner .row{
+	z-index:99;
+	position: relative;
+}
+.banner_video img{
+	max-height: 350px;
+}
+.banner_title h1{
+	font-size: 65px;
+}
+.banner_title p{
+	font-size: 13px;
+}
+
+.all_product {
+    width: 56.5%;
+    display: inline-block;
+}
+.best_buy {
+    width: 40%;
+    display: inline-block;
+    float: left;
+    background: white;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.text-blue{
+	color:#3AA1AB;
+}
+.text-subhead{
+	color: #5C5C5B;
+}
+.text-grey{
+	color: #939598;
+}
+.details_part p , .details_part h6{
+	font-size: 16px;
+	max-width: 80%;
+}
+.details_part{
+	align-self: center;
+}
+.product_list {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+}
+
+.product_list > div {
+	background: white;
+	border-radius: 3px;
+}
+.product_list > div img{
+	width: 100%;
+}
+.product_list p{
+	font-size: 20px;
+}
+.product_list p {
+    font-size: 20px;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+}
+.display_item{
+	margin-bottom: -117px;
+}
+.comfort_text h6 , .comfort_text p{
+	font-size: 16px;
+}
+.comfort_text p{
+	max-width: 80%;
+}
+.our_mission {
+    border-top: 2px solid #ccc;
+    display: inline-block;
+    width: 100%;
+}
+.comfort_text ul{
+	list-style: none;
+}
+.comfort_text ul li{
+	padding-bottom: 20px;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.comfort_text ul li:before {
+    position: absolute;
+    left: -25px;
+    width: 13px;
+    height: 2px;
+    background: #3AA1AB;
+    content: "";
+    top: 10px;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+.shop_bttn {
+    padding: 10px 20px;
+    background: #3AA1AB;
+    color: white;
+    border-radius: 3px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.comfort_text ul li:hover:before{
+	width: 25px;
+	opacity: 1;
+}
+.comfort_text ul li:hover{
+	padding-left: 20px;
+	opacity: 1;
+}
+.green_night_section {
+    background: #ffede2;
+    position: relative;
+}
+.green_night_section p{
+	font-size: 16px;
+}
+.row.sleep_section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.blog_parts {
+    background: white;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+}
+.blog_img {
+    padding: 30px 20px;
+}
+.greennight_overlay {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+.order2{
+	order:2;
+}
+.promise_text{
+	align-self: center;
+	padding: 0 50px;
+}
+.shownow_section{
+	background: #3aa1ab;
+	position: relative;
+}
+.now_bttn{
+	    background: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #3aa1ab;
+}
+.learn_bttn{
+	padding: 10px 20px;
+    color: white;
+}
+.shopnow_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    background: url('../images/shopnow-bg.png');
+    z-index: 999;
+}
+.footer_main ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+.footer_main ul li{
+	display: inline-block;
+	padding: 10px;
+}
+.listing_section {
+    display: inline-block;
+}
+/* CATEGORY page*/
+.category_banner {
+    background: #ffede2;
+    padding-top: 130px;
+}
+.category_banner .banner_title h1{
+	font-size:40px;
+}
+.category_page .navbar{
+	background: white;
+}
+.category_page .header_main a.navbar-brand {
+    font-size: 35px;
+    color: #4B4F54;
+}
+.category_page .header_main a.nav-link{
+	color: #4B4F54 !important;
+}
+.tabbings_area {
+    display: inline-block;
+}
+.tabbings_area > div{
+	background: #fff7f2;
+    border-radius: 3px;
+}
+.tabbings_area > div a{
+	display: inline-block;
+}

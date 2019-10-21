@@ -1,0 +1,322 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: (optional) The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{% set classes = [
+  'article',
+  'article--teaser',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+{{ attach_library('classy/node') }}
+<section>
+		<div class="main_container">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 px-0">
+						<div class="page_banner px-5 ">
+							<div class="banner_overlay"></div>
+							<div class="row">
+								<div class="col-sm-5 banner_title py-5">
+									<h1 class="text-white">A natural <br>nights sleep</h1>
+									<p class="text-uppercase text-white">the Ethical Matresses</p>
+								</div>
+								<div class="col-sm-7 banner_video">
+									<img src={{img}} class="w-100">
+								</div>
+								<div class="col-sm-12 display_item mt-5">
+									<div class="best_buy">
+										<div class="best_product row">
+											<div class="col-sm-5 pl-0">
+												<img src="images/best-buy.png">
+											</div>
+											<div class="col-sm-7 px-0 details_part">
+												<p class="text-uppercase text-blue">Best Buy</p>
+												<h6 class="text-uppercase text-subhead">Millenium</h6>
+												<p class="text-grey">Intibus sapicaeperum faccaec epudae ius, ut evelit eum hario.</p>
+											</div>
+										</div>
+									</div>
+									<div class="all_product">
+										<div class="product_list pl-0 pr-2">
+											<div>
+												<img src="images/signature.png">
+												<p class="text-uppercase text-subhead">Signiture</p>
+											</div>
+										</div>
+										<div class="product_list px-1">
+											<div>
+												<img src="images/signature2.png">
+												<p class="text-uppercase text-subhead">Dunlopillo Go</p>
+											</div>
+										</div>
+										<div class="product_list pr-0 pl-2">
+											<div>
+												<img src="images/signature3.png">
+												<p class="text-uppercase text-subhead">Divas Bases</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="our_mission pl-5 my-5">
+							<div class="row mx-0">
+								<div class="col-sm-6">
+									<div class="comfort_text pt-5">
+										<h6 class="text-uppercase text-grey">Our Mission</h6>
+										<h1 class="text-subhead pb-4">Sustainable comfort</h1>
+										<p class="text-grey">Sleep easy with our environmentally friendly mattresses, made from natural latex rubber. All our latex is harvested from sustainably managed plantations, which purify over 90 million tons of carbon dioxide a year.</p>
+										<ul class="mt-4 pl-4">
+											<li>
+												<span class="text-blue text-uppercase">7 comfort zones</span>
+											</li>
+											<li>
+												<span class="text-blue text-uppercase">Pressure Relieving</span>
+											</li>
+											<li>
+												<span class="text-blue text-uppercase">Breathable</span>
+											</li>
+											<li>
+												<span class="text-blue text-uppercase">Progressive comfort</span>
+											</li>
+											<a href="javascript:void(0)" class="text-uppercase shop_bttn">Shop mattresses</a>
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-6 mission_img pr-0">
+									<img src="images/mission-right.png" class="w-100">
+								</div>
+							</div>
+						</div>
+						<div class="green_night_section px-5 py-5">
+							<div class="greennight_overlay">
+								<img src="images/green-right.png">
+							</div>
+							<div class="">
+								<p class="text-uppercase">Our Values</p>
+								<h1 class="mb-5">A green nights sleep</h1>
+								<div class="row sleep_section py-4">
+									<div class="col-sm-4">
+										<div class="blog_parts">
+											<div class="blog_img">
+												<img src="images/ethical.png">
+											</div>
+											<div class="description_sec">
+												<h6 class="text-uppercase pb-2 text-subhead">Ethical Practice</h6>
+												<p class="text-grey">We're committed to providing you with the best service.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="blog_parts">
+											<div class="blog_img">
+												<img src="images/ethical.png">
+											</div>
+											<div class="description_sec">
+												<h6 class="text-uppercase pb-2 text-subhead">Natural Resources</h6>
+												<p class="text-grey">We're committed to providing you with the best service.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="blog_parts">
+											<div class="blog_img">
+												<img src="images/ethical.png">
+											</div>
+											<div class="description_sec">
+												<h6 class="text-uppercase pb-2 text-subhead">Enviromental</h6>
+												<p class="text-grey">We're committed to providing you with the best service.</p>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="our_promise col-sm-12">
+							<div class="promise_section row">
+								<div class="col-sm-6 promise_img px-0">
+									<img src="images/promise1.png" class="w-100">
+								</div>
+								<div class="col-sm-6 promise_text">
+									<div>
+										<p class="text-uppercase text-grey">our Promise</p>
+										<h1 class="pb-2 text-subhead">Transform your night</h1>
+										<p class="text-grey">We take sleep seriously, crafting contemporary designs that blend style with comfort. Enjoy the ultimate sleep experience with our durable mattresses, made from sustainably sourced latex and perfectly engineered for natural resistance and hold. </p>
+									</div>
+								</div>
+							</div>
+							<div class="promise_section row">
+								<div class="col-sm-6 promise_img order2 px-0">
+									<img src="images/promise2.png" class="w-100">
+								</div>
+								<div class="col-sm-6 promise_text">
+									<div>
+										<p class="text-uppercase text-grey">our Promise</p>
+										<h1 class="pb-2 text-subhead">The science of sleep</h1>
+										<p class="text-grey">Wake up feeling fresh, clean and healthy, with the help of our Actipro™ technology. Used in the fabric of our mattresses, it provides natural protection against allergens, dust mites, and odours, ensuring you get the best night’s sleep, every night. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="shownow_section col-sm-12 py-5 ">
+							<div class="shopnow_overlay"></div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="shopow_banner py-5 text-center ">
+										<h1 class="text-white">Ready for a natural nights sleep?</br>Head to our shop –</h1>
+										<div class="shopnow_bttns mt-5">
+											<a href="javascript:void(0)" class="text-uppercase now_bttn">Shop Now</a>
+											<a href="javascript:void(0)" class="text-uppercase learn_bttn">Learn More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="footer_main px-5 pt-5 pb-3">
+						<div class="footer_menu">
+							<ul>
+								<li class="pl-0">
+									<a href="javascript:void(0)" class="text-grey">
+										<span>Mattresses</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"  class="text-grey">
+										<span>Divan bases</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)"  class="text-grey">
+										<span>Headboards</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="text-grey">
+										<span>The review</span>
+									</a>
+								</li>
+							</ul>
+							<ul class="float-right">
+								<li>
+									<a href="javascript:void(0)" class="text-grey">
+										<span>Delivery</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="text-grey">
+										<span>Stockists</span>
+									</a>
+								</li>
+								<li class="pr-0">
+									<a href="javascript:void(0)" class="text-grey">
+										<span>FAQ</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_details">
+							<div class="listing_section pr-5">
+								<h6 class="text-uppercase text-grey mb-3">Steinhoff UK Beds Ltd.</h6>
+								<p class="text-grey">Registered no. 08431253</br>VAT No. GB 506 3312 84</p>
+							</div>
+							<div class="listing_section pr-5">
+								<h6 class="text-uppercase text-grey mb-3">Address</h6>
+								<p class="text-grey">5th Floor, Festival House, Jessop </br>Avenue, Cheltenham, </p>
+							</div>
+							<div class="listing_section">
+								<h6 class="text-uppercase text-grey mb-3">Contact</h6>
+								<p class="mb-0">
+									<a href="tel:+0800 158 4842" class="text-grey">0800 158 4842</a>
+								</p>
+								<p>
+									<a href="mailto:info@slumberland.co.uk" target="_top"  class="text-blue">info@slumberland.co.uk</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>

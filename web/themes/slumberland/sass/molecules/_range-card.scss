@@ -1,0 +1,35 @@
+.range-card {
+  max-width: 521px;
+  @include flex;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: $text;
+
+  .range-card__image {
+    width: 45%;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .range-card__content {
+    flex: 1;
+    padding: 5.3rem 2rem 2rem 2.7rem;
+    background-color: $white;
+
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .range-card__label {
+    font-family: Biryani;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $secondary-blue;
+    margin-bottom: 1.7rem;
+  }
+}
+
+

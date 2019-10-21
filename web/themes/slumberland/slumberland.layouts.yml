@@ -1,0 +1,91 @@
+# +-------------------+
+# |                   |
+# |                   |
+# +-------------------+
+layout_onecol:
+  label: '1 col'
+  template: layout--onecol
+  category: 'Cols: 1'
+  class: '\Drupal\slumberland_blocks\Plugin\Layout\Layout'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+# +-------------------+
+# |                   |
+# |                   |
+# +-------------------+
+layout_onecol_ful:
+  label: '1 col (full-width)'
+  template: layout--onecol-full
+  category: 'Cols: 1'
+  class: '\Drupal\slumberland_blocks\Plugin\Layout\Layout'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+# +--------------------+
+# |         |          |
+# |         |          |
+# +--------------------+
+layout_twocol:
+  label: '2 cols'
+  template: layout--twocol
+  category: 'Cols: 2'
+  class: '\Drupal\slumberland_blocks\Plugin\Layout\Layout'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+# +--------------------+
+# |      |      |      |
+# |      |      |      |
+# +--------------------+
+layout_threecol:
+  label: '3 cols'
+  template: layout--threecol
+  category: 'Cols: 3'
+  class: '\Drupal\slumberland_blocks\Plugin\Layout\Layout'
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+# +-------------------+
+# |    |    |    |    |
+# |    |    |    |    |
+# +-------------------+
+layout_fourcol:
+  label: '4 cols'
+  template: layout--fourcol
+  category: 'Cols: 4'
+  class: '\Drupal\slumberland_blocks\Plugin\Layout\Layout'
+  default_region: first
+  icon_map:
+    - [first, second, third, forth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    forth:
+      label: Forth

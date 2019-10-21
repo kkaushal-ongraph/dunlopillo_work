@@ -1,0 +1,24 @@
+@include tablet-up() {
+  .layout--twocol,
+  .layout--twocol-left-sidebar,
+  .layout--twocol-right-sidebar,
+  .layout--threecol,
+  .layout--fourcol {
+    @include flex();
+  }
+}
+
+@include tablet-up() {
+  .layout--twocol-right-sidebar--full .container {
+    @include flex();
+  }
+}
+
+// Allow the user to align items as they see fit
+.layout--center {
+  align-items: center;
+}
+
+.layout--bottom {
+  align-items: flex-end;
+}

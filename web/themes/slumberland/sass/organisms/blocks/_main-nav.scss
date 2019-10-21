@@ -1,0 +1,24 @@
+nav.menu--main {
+  padding: 0 0 0 4.7rem;
+  flex: 1;
+  margin: 0 -24.5px;
+
+  ul.menu {
+    @include flex;
+    margin: 0;
+
+    li {
+      padding: 0 24.5px;
+
+      &:nth-child(4) {
+        margin-right: auto;
+      }
+
+      a {
+        line-height: 26px;
+        color: $secondary-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}

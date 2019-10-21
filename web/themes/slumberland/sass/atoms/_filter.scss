@@ -1,0 +1,21 @@
+.filter {
+  position: relative;
+
+  .filter__description {
+    display: none;
+    z-index: 5;
+    width: 230px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 4px;
+    background-color: #fde7e7;
+  }
+
+  &:hover {
+    .filter__description {
+      display: block;
+    }
+  }
+}

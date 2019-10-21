@@ -1,0 +1,33 @@
+@mixin flex() {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin site-max-width() {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@mixin wings() {
+  position: relative;
+
+  &:before, &:after {
+    width: 100vw;
+    height: 100%;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    background-color: inherit;
+  }
+
+  &:before {
+    left: 100%;
+  }
+
+  &:after {
+    right: 100%;
+  }
+}

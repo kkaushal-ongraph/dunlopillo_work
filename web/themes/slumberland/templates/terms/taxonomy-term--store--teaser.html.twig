@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Theme override to display a taxonomy content.
+ *
+ * Available variables:
+ * - url: URL of the current content.
+ * - name: Name of the current content.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy content.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ */
+#}
+{% set classes = [
+  'store',
+  'taxonomy-term',
+  'vocabulary-' ~ content.bundle|clean_class,
+  view_mode ? 'taxonomy-term--view-mode-' ~ view_mode|clean_class
+] %}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}
+  data-lat="{{ term.field_latitude.value }}"
+  data-lng="{{ term.field_longitude.value }}"
+  data-name="{{ term.name.value }}"
+  data-address="{{ term.field_address_line1.value }} {{ term.field_address_line2.value }}"
+  data-postcode="{{ term.field_postcode.value }}"
+  data-id="{{ term.id }}"
+>
+
+  <div class="store__header">
+    <div class="store__header__distance">
+      <span class="store__header__distance__miles"></span> miles
+    </div>
+    <div class="store__header__contact">
+      {{ term.field_phone_number.0.value }} | <a href="{{ term.field_url.0.url }}" target="_blank">{{ 'Website'|t }}</a>
+    </div>
+  </div>
+
+  <div class="store__content">
+
+    {% if customer_group.field_logo.entity.fileuri != '' %}
+      <div class="store__content__logo">
+        {% if customer_group.field_url.0.url != '' %}
+          <a target="_blank" href="{{ customer_group.field_url.0.url }}">
+            <img src="{{ file_url(customer_group.field_logo.entity.fileuri) }}" alt="">
+          </a>
+        {% else %}
+          <img src="{{ file_url(customer_group.field_logo.entity.fileuri) }}" alt="">
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="store__content__address">
+      {{ title_prefix|raw }}
+      <h2{{ title_attributes }}>{{ name }}</h2>
+      {{ title_suffix }}
+      <p>{{ term.field_address_line1.value }} {{ term.field_address_line2.value }}, {{ term.field_postcode.value }}</p>
+    </div>
+
+  </div>
+
+  <div class="store__footer">
+    <div class="store__footer__available">
+      <div class="store__footer__available__title">
+        <span class="store__footer__available__number">{{ store_model_total }}</span> Available to Try
+      </div>
+      <div class="store__footer__available__models">
+        {{ content.field_models_stocked }}
+      </div>
+    </div>
+  </div>
+
+</article>

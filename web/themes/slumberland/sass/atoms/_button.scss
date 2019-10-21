@@ -1,0 +1,32 @@
+.button, .button--secondary {
+  background-color: $primary-red;
+  color: $white;
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Biryani;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  padding: 2.1rem 2.7rem 1.7rem;
+
+  &:hover, &:focus {
+    opacity: 0.85;
+  }
+
+  &--wide {
+    padding: 2.1rem 6.2rem 1.7rem;
+  }
+}
+
+.button--secondary, [class*='button--secondary'] {
+  background-color: $white;
+  color: $primary-red;
+
+  &:hover, &:focus {
+
+  }
+}

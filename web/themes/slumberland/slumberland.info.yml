@@ -1,0 +1,22 @@
+name: Slumberland
+type: theme
+description: 'A theme for the Slumberland website.'
+package: Core
+version: 1.0
+core: 8.x
+base theme: classy
+
+libraries:
+  - slumberland/global-styling
+  - slumberland/global-scripts
+
+regions:
+  header: Header
+  before_content: Before Content
+  content: Content
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom
+
+stylesheets-remove:
+  - core/themes/classy/css/components/button.css
+

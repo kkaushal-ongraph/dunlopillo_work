@@ -1,0 +1,16 @@
+.slumberland-header {
+  margin: 0 -4rem;
+  padding: 8.1rem 4rem 10.7rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #eeeeee;
+
+  .slumberland-header__content {
+    max-width: 520px;
+
+    h1 {
+      margin-bottom: 3.5rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// One col
+.layout--onecol .layout__region {
+  width: 100%;
+}
+
+// Two col
+@include tablet-up() {
+  .layout--twocol > .layout__region--first,
+  .layout--twocol > .layout__region--second {
+    flex: 0 1 45%;
+  }
+}
+
+// Three col
+@include tablet-up() {
+  .layout--threecol > .layout__region--first,
+  .layout--threecol > .layout__region--second,
+  .layout--threecol > .layout__region--third {
+    flex: 0 1 32%;
+  }
+}
+
+// Four col
+@include tablet-up() {
+  .layout--fourcol > .layout__region--first,
+  .layout--fourcol > .layout__region--second,
+  .layout--fourcol > .layout__region--third,
+  .layout--fourcol > .layout__region--forth {
+    flex: 0 1 22%;
+  }
+}

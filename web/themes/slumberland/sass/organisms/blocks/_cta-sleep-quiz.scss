@@ -1,0 +1,34 @@
+.cta-sleep-quiz {
+  background: $secondary-blue url("../images/sleep-quiz-bg.svg") no-repeat center;
+  position: relative;
+  z-index: 1;
+  padding: 5.4rem 2rem 3.1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  color: $white;
+
+  .cta-sleep-quiz__content {
+    max-width: 572px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      color: $white;
+      margin-bottom: 2.3rem;
+    }
+
+    p + p {
+      margin-top: 1.6rem;
+    }
+  }
+
+  .cta-sleep-quiz__dreamcatcher {
+    width: 122px;
+    height: 237px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: -447px;
+    background: url("../images/sleep-quiz-dreamcatcher.png") no-repeat 0 0;
+  }
+}

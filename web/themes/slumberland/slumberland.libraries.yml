@@ -1,0 +1,21 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/screen.css: {}
+      css/main.min.css: {}
+      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+      
+
+      
+
+global-scripts:
+  version: VERSION
+  js:
+    js/main.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal 

@@ -1,0 +1,62 @@
+footer[role='contentinfo'] {
+  margin-bottom: -1px;
+  background-color: $secondary-blue;
+  padding: 5rem 0 4.3rem;
+  color: $white;
+
+  .region {
+    @include flex;
+  }
+
+  .region-footer-top {
+    align-items: center;
+    margin-bottom: 4.7rem;
+  }
+
+  .block-system-branding-block {
+    svg #Symbols path {
+      fill: $white;
+    }
+  }
+
+  .block-block-content {
+    max-width: 347px;
+    padding-right: 3.7rem;
+
+    h2 {
+      font-family: 'Muli', sans-serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      color: $white;
+    }
+
+    p {
+      color: $white-alpha-5;
+      mix-blend-mode: normal;
+
+      a {
+        color: $white-alpha-5;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #block-footerlogos {
+    padding-right: 0;
+    margin-left: auto;
+
+    p {
+      @include flex;
+      align-items: center;
+
+      img {
+        margin-left: 3.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: 'dunlopillo_custom'
+type: module
+description: 'It is a custom module'
+core: 8.x
+package: 'Custom'

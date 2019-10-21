@@ -1,0 +1,7 @@
+name: dunlopillo custom module
+description: Creates a page showing for dunlopillo.
+package: Custom
+
+type: module
+core: 8.x
+
