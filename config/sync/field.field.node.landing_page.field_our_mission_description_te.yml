@@ -1,15 +1,15 @@
-uuid: c7205f2e-bfba-4d7c-b77e-078844b704a3
+uuid: 418c50dd-b82b-4cb9-b30d-97595daf88a8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_our_mission
+    - field.storage.node.field_our_mission_description_te
     - node.type.landing_page
-id: node.landing_page.field_our_mission
-field_name: field_our_mission
+id: node.landing_page.field_our_mission_description_te
+field_name: field_our_mission_description_te
 entity_type: node
 bundle: landing_page
-label: 'Our mission'
+label: 'Our mission description text'
 description: ''
 required: false
 translatable: false

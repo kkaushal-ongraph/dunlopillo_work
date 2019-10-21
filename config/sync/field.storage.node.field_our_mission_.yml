@@ -1,17 +1,16 @@
-uuid: edcb1146-b9eb-4d6e-aa7e-61f31ebab80a
+uuid: 988a3d31-b776-4805-8876-5bce1fdca365
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_our_mission
-field_name: field_our_mission
+    - taxonomy
+id: node.field_our_mission_
+field_name: field_our_mission_
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
