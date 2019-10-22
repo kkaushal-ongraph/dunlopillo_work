@@ -1,0 +1,8 @@
+uuid: fa6a00df-f6fb-49c4-b65c-d91f4dbe437b
+langcode: en
+status: true
+dependencies: {  }
+id: footer-right
+label: 'Footer Right'
+description: 'Site footer information links'
+locked: false

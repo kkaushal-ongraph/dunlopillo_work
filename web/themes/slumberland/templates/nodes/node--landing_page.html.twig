@@ -98,13 +98,13 @@
                             <div class="col-sm-12 display_item mt-5">
                                 <div class="best_buy">
                                     <div class="best_product row">
-                                        <div class="col-sm-5 pl-0">
-                                            {{content.field_banner_detail_2_image}}
+                                        <div class="col-sm-5 ">
+                                            {{content.field_banner_detail_1_image}}
                                         </div>
                                         <div class="col-sm-7 px-0 details_part">
-                                            <p class="text-uppercase text-blue">Best Buy</p>
-                                            <h6 class="text-uppercase text-subhead">Millenium</h6>
-                                            <p class="text-grey">{{content.field_banner_detail_1}}</p>
+                                            <div class="text-uppercase text-blue">{{content.field_banner_detail_1}}</div>
+{#                                            <h6 class="text-uppercase text-subhead">Millenium</h6>#}
+                                            <div class="text-grey">{{content.field_best_buy_desc}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -112,19 +112,19 @@
                                     <div class="product_list pl-0 pr-2">
                                         <div>
                                             {{content.field_banner_detail_2_image}}
-                                            <p class="text-uppercase text-subhead">{{field_banner_detail_}}</p>
+                                            <div class="text-uppercase text-subhead">{{content.field_banner_detail_}}</div>
                                         </div>
                                     </div>
                                     <div class="product_list px-1">
                                         <div>
                                             {{content.field_banner_detail__image}}
-                                            <p class="text-uppercase text-subhead">Dunlopillo Go</p>
+                                            <div class="text-uppercase text-subhead">{{content.field_banner_detail_3}}</div>
                                         </div>
                                     </div>
                                     <div class="product_list pr-0 pl-2">
                                         <div>
                                             {{content.field_divas_bases_image}}
-                                            <p class="text-uppercase text-subhead">Divas Bases</p>
+                                            <div class="text-uppercase text-subhead">{{content.field_divas_bases}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                                 <div class="comfort_text pt-5">
 {#                                    <h6 class="text-uppercase text-grey">Our Mission</h6>#}
                                     <h1 class="text-subhead pb-4">{{content.field_our_mission}}</h1>
-                                    <p class="text-grey">{{content.field_our_mission_description_te}}</p>
+                                    <div class="text-grey">{{content.field_our_mission_description_te}}</div>
                                     <ul class="mt-4 pl-4">
                                         <li>
                                             <span class="text-blue text-uppercase">7 comfort zones</span>
@@ -165,8 +165,8 @@
                             {{content.field_our_values_background}}
                         </div>
                         <div class="">
-                            <p class="text-uppercase">Our Values</p>
-                            <h1 class="mb-5">{{content.field_our_values}}</h1>
+{#                            <p class="text-uppercase">Our Values</p>#}
+                            <h1 class="mb-5 night_heading">{{content.field_our_values}}</h1>
                             <div class="row sleep_section py-4">
                                 <div class="col-sm-4">
                                     <div class="blog_parts">
@@ -174,8 +174,8 @@
                                             {{content.field_our_values_tiles_image}}
                                         </div>
                                         <div class="description_sec">
-                                            <h6 class="text-uppercase pb-2 text-subhead">Ethical Practice</h6>
-                                            <p class="text-grey">{{content.field_ethical_practice}}</p>
+{#                                            <h6 class="text-uppercase pb-2 text-subhead">Ethical Practice</h6>#}
+                                            <div class="text-grey">{{content.field_ethical_practice}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -185,8 +185,8 @@
                                             {{content.field_our_values_tiles_image}}
                                         </div>
                                         <div class="description_sec">
-                                            <h6 class="text-uppercase pb-2 text-subhead">Natural Resources</h6>
-                                            <p class="text-grey">{{content.field_naatural_resurce}}</p>
+{#                                            <h6 class="text-uppercase pb-2 text-subhead">Natural Resources</h6>#}
+                                            <div class="text-grey">{{content.field_naatural_resurce}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -196,8 +196,8 @@
                                             {{content.field_our_values_tiles_image}}
                                         </div>
                                         <div class="description_sec">
-                                            <h6 class="text-uppercase pb-2 text-subhead">Enviromental</h6>
-                                            <p class="text-grey">{{content.field_enviromental}}</p>
+{#                                            <h6 class="text-uppercase pb-2 text-subhead">Enviromental</h6>#}
+                                            <div class="text-grey">{{content.field_enviromental}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@
                                 <div>
 {#                                    <p class="text-uppercase text-grey">our Promise</p>#}
                                     <h1 class="pb-2 text-subhead">{{content.field_our_promise}}</h1>
-                                    <p class="text-grey">{{content.field_our_promise_desc}} </p>
+                                    <div class="text-grey">{{content.field_our_promise_desc}} </div>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                                 <div>
 {#                                    <p class="text-uppercase text-grey">our Promise</p>#}
                                     <h1 class="pb-2 text-subhead">{{content.field_our_promise2}}</h1>
-                                    <p class="text-grey">{{content.field_our_promise_desc2}}</p>
+                                    <div class="text-grey">{{content.field_our_promise_desc2}}</div>
                                 </div>
                             </div>
                         </div>
@@ -250,73 +250,3 @@
         </div>
     </div>
 </section>
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="footer_main px-5 pt-5 pb-3">
-                    <div class="footer_menu">
-                        <ul>
-                            <li class="pl-0">
-                                <a href="javascript:void(0)" class="text-grey">
-                                    <span>Mattresses</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"  class="text-grey">
-                                    <span>Divan bases</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"  class="text-grey">
-                                    <span>Headboards</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="text-grey">
-                                    <span>The review</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="float-right">
-                            <li>
-                                <a href="javascript:void(0)" class="text-grey">
-                                    <span>Delivery</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="text-grey">
-                                    <span>Stockists</span>
-                                </a>
-                            </li>
-                            <li class="pr-0">
-                                <a href="javascript:void(0)" class="text-grey">
-                                    <span>FAQ</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_details">
-                        <div class="listing_section pr-5">
-                            <h6 class="text-uppercase text-grey mb-3">Steinhoff UK Beds Ltd.</h6>
-                            <p class="text-grey">Registered no. 08431253</br>VAT No. GB 506 3312 84</p>
-                        </div>
-                        <div class="listing_section pr-5">
-                            <h6 class="text-uppercase text-grey mb-3">Address</h6>
-                            <p class="text-grey">5th Floor, Festival House, Jessop </br>Avenue, Cheltenham, </p>
-                        </div>
-                        <div class="listing_section">
-                            <h6 class="text-uppercase text-grey mb-3">Contact</h6>
-                            <p class="mb-0">
-                                <a href="tel:+0800 158 4842" class="text-grey">0800 158 4842</a>
-                            </p>
-                            <p>
-                                <a href="mailto:info@slumberland.co.uk" target="_top"  class="text-blue">info@slumberland.co.uk</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>

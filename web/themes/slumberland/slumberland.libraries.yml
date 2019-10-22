@@ -2,9 +2,10 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/screen.css: {}
-      css/main.min.css: {}
       //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+      //fonts.googleapis.com/css?family=Barlow&display=swap: {}
+      css/main.min.css: {}
+      css/screen.css: {}
       
 
       

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
+    - field.field.node.landing_page.field_best_buy_desc
     - field.field.node.landing_page.field_divas_bases
     - field.field.node.landing_page.field_divas_bases_image
     - field.field.node.landing_page.field_enviromental
@@ -104,6 +105,14 @@ content:
     region: content
   field_banner_text:
     weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_best_buy_desc:
+    weight: 151
     settings:
       size: 60
       placeholder: ''

@@ -1,0 +1,25 @@
+uuid: 99040882-2c23-49a7-941d-cd40615207ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-right
+  module:
+    - system
+  theme:
+    - slumberland
+id: footerright
+theme: slumberland
+region: footer_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-right'
+settings:
+  id: 'system_menu_block:footer-right'
+  label: 'Footer Right'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

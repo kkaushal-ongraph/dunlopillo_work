@@ -38,8 +38,11 @@
  */
 #}
 
-
-<header role="banner">
+{% set rm_classes = [
+  'fixed'
+]
+%}
+<header>
     <div class="header_main">
         {{ page.header }}
     </div>
@@ -47,20 +50,30 @@
 
 {{ page.before_content }}
 
-<main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+{#<main role="main">
+    <a id="main-content" tabindex="-1"></a>#}{# link is in html.html.twig #}
 
-    <div class="layout-content">
-        {{ page.content }}
-    </div>{# /.layout-content #}
+{#    <div class="layout-content">#}
+{{ page.content }}
+{#</div>#}{# /.layout-content #}
 
-</main>
+{#</main>#}
 
 
 
-<footer role="contentinfo">
-    <div class="container">
-        {{ page.footer_top }}
-        {{ page.footer_bottom }}
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer_main px-5 pt-5 pb-3">
+                    <div class="footer_menu">
+                        {{ page.footer_top }}
+                    </div>
+                    {{ page.footer_bottom }}                    
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
+{#        {{ page.footer_bottom }}#}
+

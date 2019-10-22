@@ -1,0 +1,25 @@
+uuid: 36d2b11a-d903-4949-a14f-5d5eed27a81d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1e70d1f8-abac-4e93-90f3-39bee41d2f88'
+  module:
+    - block_content
+  theme:
+    - slumberland
+id: footeraddress
+theme: slumberland
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:1e70d1f8-abac-4e93-90f3-39bee41d2f88'
+settings:
+  id: 'block_content:1e70d1f8-abac-4e93-90f3-39bee41d2f88'
+  label: 'Footer Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

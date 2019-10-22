@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.landing_page.field_banner_detail__image
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_banner_text
+    - field.field.node.landing_page.field_best_buy_desc
     - field.field.node.landing_page.field_divas_bases
     - field.field.node.landing_page.field_divas_bases_image
     - field.field.node.landing_page.field_enviromental
@@ -40,23 +41,23 @@ bundle: landing_page
 mode: default
 content:
   field_banner_detail_:
-    weight: 105
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_banner_detail_1:
-    weight: 103
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_banner_detail_1:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_banner_detail_1_image:
-    weight: 104
+    weight: 4
     label: hidden
     settings:
       image_style: ''
@@ -65,7 +66,7 @@ content:
     type: image
     region: content
   field_banner_detail_2_image:
-    weight: 106
+    weight: 6
     label: hidden
     settings:
       image_style: ''
@@ -74,7 +75,7 @@ content:
     type: image
     region: content
   field_banner_detail_3:
-    weight: 107
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -82,7 +83,7 @@ content:
     type: string
     region: content
   field_banner_detail__image:
-    weight: 108
+    weight: 8
     label: hidden
     settings:
       image_style: ''
@@ -91,7 +92,7 @@ content:
     type: image
     region: content
   field_banner_image:
-    weight: 102
+    weight: 2
     label: hidden
     settings:
       image_style: ''
@@ -100,7 +101,15 @@ content:
     type: image
     region: content
   field_banner_text:
-    weight: 101
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_best_buy_desc:
+    weight: 28
     label: hidden
     settings:
       link_to_entity: false
@@ -108,7 +117,7 @@ content:
     type: string
     region: content
   field_divas_bases:
-    weight: 129
+    weight: 9
     label: hidden
     settings:
       link_to_entity: false
@@ -116,7 +125,7 @@ content:
     type: string
     region: content
   field_divas_bases_image:
-    weight: 130
+    weight: 10
     label: hidden
     settings:
       image_style: ''
@@ -125,7 +134,7 @@ content:
     type: image
     region: content
   field_enviromental:
-    weight: 120
+    weight: 20
     label: above
     settings:
       link_to_entity: false
@@ -133,7 +142,7 @@ content:
     type: string
     region: content
   field_ethical_practice:
-    weight: 118
+    weight: 18
     label: above
     settings:
       link_to_entity: false
@@ -141,7 +150,7 @@ content:
     type: string
     region: content
   field_head_to_our_shop:
-    weight: 128
+    weight: 27
     label: above
     settings:
       link_to_entity: false
@@ -149,7 +158,7 @@ content:
     type: string
     region: content
   field_naatural_resurce:
-    weight: 119
+    weight: 19
     label: above
     settings:
       link_to_entity: false
@@ -157,7 +166,7 @@ content:
     type: string
     region: content
   field_our_mission:
-    weight: 110
+    weight: 11
     label: above
     settings:
       link_to_entity: false
@@ -165,7 +174,7 @@ content:
     type: string
     region: content
   field_our_mission_:
-    weight: 112
+    weight: 13
     label: above
     settings:
       link: true
@@ -173,15 +182,15 @@ content:
     type: entity_reference_label
     region: content
   field_our_mission_description_te:
-    weight: 111
-    label: above
+    weight: 12
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_our_mission_image:
-    weight: 113
+    weight: 14
     label: hidden
     settings:
       image_style: ''
@@ -190,7 +199,7 @@ content:
     type: image
     region: content
   field_our_promise:
-    weight: 121
+    weight: 21
     label: above
     settings:
       link_to_entity: false
@@ -198,7 +207,7 @@ content:
     type: string
     region: content
   field_our_promise2:
-    weight: 125
+    weight: 24
     label: above
     settings:
       link_to_entity: false
@@ -206,23 +215,23 @@ content:
     type: string
     region: content
   field_our_promise_desc:
-    weight: 122
-    label: above
+    weight: 22
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_our_promise_desc2:
-    weight: 126
-    label: above
+    weight: 25
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_our_promise_image1:
-    weight: 124
+    weight: 23
     label: hidden
     settings:
       image_style: ''
@@ -231,7 +240,7 @@ content:
     type: image
     region: content
   field_our_promise_image_2:
-    weight: 127
+    weight: 26
     label: hidden
     settings:
       image_style: ''
@@ -240,7 +249,7 @@ content:
     type: image
     region: content
   field_our_values:
-    weight: 115
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -248,8 +257,8 @@ content:
     type: string
     region: content
   field_our_values_background:
-    weight: 116
-    label: above
+    weight: 16
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -257,7 +266,7 @@ content:
     type: image
     region: content
   field_our_values_tiles_image:
-    weight: 117
+    weight: 17
     label: hidden
     settings:
       image_style: ''
@@ -266,7 +275,7 @@ content:
     type: image
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
